@@ -28,7 +28,14 @@ st.write(raw_data.head(10))
 
 
 import matplotlib.pyplot as plt
-raw_data["LeaveOrNot"].value_counts().plot(kind='pie',autopct="%0.1f%%")
+import seaborn as sns
+
+features = ['Education', 'City', 'Gender', 'EverBenched']
+
+
+for f in features:
+    plt.figure()
+    ax = sns.countplot(x=f, data=raw_data, hue = 'LeaveOrNot', palette="Set1")
 
 if st.button("show bar chart"):
     st.bar_chart(raw_data)
