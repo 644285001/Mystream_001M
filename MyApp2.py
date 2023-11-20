@@ -51,4 +51,6 @@ html_3 = """
 st.markdown(html_3, unsafe_allow_html=True)
 st.markdown("")   
 
+splen = st.number_input("กรุณาเลือกข้อมูล Education", step=1, format="%d")
+
 
