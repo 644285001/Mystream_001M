@@ -43,3 +43,12 @@ raw_data["EverBenched"]=le.fit_transform(raw_data["EverBenched"])
 
 st.write(raw_data.head(10))
 
+html_3 = """
+<div style="background-color:#FFBF00;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<center><h5>การทำนายคลาสการลาออกของพนักงาน</h5></center>
+</div>
+"""
+st.markdown(html_3, unsafe_allow_html=True)
+st.markdown("")   
+
+
