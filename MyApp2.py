@@ -27,18 +27,3 @@ raw_data=pd.read_csv('./data/Employee.csv')
 st.write(raw_data.head(10))
 
 
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-features = ['Education', 'City', 'Gender', 'EverBenched']
-
-
-for f in features:
-    plt.figure()
-    ax = sns.countplot(x=f, data=raw_data, hue = 'LeaveOrNot', palette="Set1")
-
-if st.button("show bar chart"):
-    st.bar_chart(raw_data)
-    st.button("Not show bar chart")
-else :
-    st.button("Not show bar chart") 
