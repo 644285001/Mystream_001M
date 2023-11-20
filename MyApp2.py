@@ -21,3 +21,7 @@ html_1 = """
 st.markdown(html_1, unsafe_allow_html=True)
 st.markdown("")
 
+import pandas as pd
+
+raw_data=pd.read_csv('./data/Employee.csv')
+st.write(raw_data.head(10))
