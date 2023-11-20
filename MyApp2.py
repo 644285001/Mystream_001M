@@ -52,5 +52,10 @@ st.markdown(html_3, unsafe_allow_html=True)
 st.markdown("")   
 
 splen = st.number_input("กรุณาเลือกข้อมูล Education", step=1, format="%d")
-
-
+splen = st.number_input("กรุณาเลือกข้อมูล JoiningYear", step=1, format="%d")
+splen = st.number_input("กรุณาเลือกข้อมูล City", step=1, format="%d")
+splen = st.number_input("กรุณาเลือกข้อมูล PaymentTier", step=1, format="%d")
+splen = st.number_input("กรุณาเลือกข้อมูล Age", step=1, format="%d")
+splen = st.number_input("กรุณาเลือกข้อมูล Gender", step=1, format="%d")
+splen = st.number_input("กรุณาเลือกข้อมูล EverBenched", step=1, format="%d")
+splen = st.number_input("กรุณาเลือกข้อมูล ExperienceInCurrentDomain", step=1, format="%d")
