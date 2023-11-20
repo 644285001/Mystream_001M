@@ -26,4 +26,20 @@ import pandas as pd
 raw_data=pd.read_csv('./data/Employee.csv')
 st.write(raw_data.head(10))
 
+html_2 = """
+<div style="background-color:#52BE80;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<center><h5>แปลงข้อมูลให้พร้อมสำหรับการทำนาย</h5></center>
+</div>
+"""
+st.markdown(html_2, unsafe_allow_html=True)
+st.markdown("")
+
+from sklearn.preprocessing import LabelEncoder
+le=LabelEncoder()
+raw_data["Education"]= le.fit_transform(raw_data["Education"])
+raw_data["City"]=le.fit_transform(raw_data["City"])
+raw_data["Gender"]=le.fit_transform(raw_data["Gender"])
+raw_data["EverBenched"]=le.fit_transform(raw_data["EverBenched"])
+
+st.write(raw_data.head(10))
 
